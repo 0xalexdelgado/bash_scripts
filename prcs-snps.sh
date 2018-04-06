@@ -1,11 +1,15 @@
 #!/bin/bash
 #
 # This script takes a snapshot of the running processes, removes the first line of the file
-# and then removes everything else other than the processes names.
+# and then removes everything else other than the processes names. This script will create the
+# directory /var/log/prcs-snps which is where the process snapshots will be savead to. Run the 
+# script as root. 
 # 
 # Created by Alexander Delgado
 # April 4th, 2018
 #
+
+mkdir /var/log/prcs-snps
 
 FILE=$(date +%F)_$(date +%a)_$(date +%T)
 
